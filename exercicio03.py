@@ -1,18 +1,24 @@
-hora1 = int(input("Digite um horario ate 12h: "))
-minuto1 = float(input("Digite a quantidade de minutos"))
-hora2 = int(input("Digite um horario ate 24h"))
-minuto2 = float(input("Quantos minutos?"))
+hora1 = int(input("Digite um horario: "))
+minuto1 = int(input("Digite a quantidade de minutos"))
+hora2 = int(input("Digite um horario: "))
+minuto2 = int(input("Quantos minutos?"))
 ###################################################
-somahora = (hora1 + hora2)
-somaminuto = (minuto1 + minuto2)
-somatotal = (somahora + somaminuto) /12
+somahora = hora1 + hora2
+somaminuto = minuto1 + minuto2
 ##################################################
-if somahora > 12 :
-    somahora = (- 12 + somatotal)
+if somahora >= 24 :
+    somahora = somahora - 24
 ##################################################
 if somaminuto >= 60 :
-    somaminuto = (-60 + somaminuto)
-print(f"São: {somatotal} ")
+    somahora = somahora -12
+    somahora = somahora +1
+    somaminuto = somaminuto -60
+print(f"O horário foi: {somahora}:{somaminuto}")
+
+
+
+
+
 
 
 
